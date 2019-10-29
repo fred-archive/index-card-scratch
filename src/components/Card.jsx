@@ -11,6 +11,7 @@ export default class Card extends React.Component{
         const {id} = this.props
         return(
             <div className="card">
+                Card.jsx
                 <h2>{id}</h2>
             </div>
         )

@@ -12,7 +12,6 @@ export default class Display extends React.Component {
     }
 
     getCard(){
-        // console.log(res.data)
         axios
         .get('/api/cards/')
         .then(res =>

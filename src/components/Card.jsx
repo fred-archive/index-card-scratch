@@ -4,13 +4,14 @@ export default class Card extends React.Component{
     constructor(){
         super()
         this.state = {
-
+            
         }
     }
     render(){
+        const {id} = this.props
         return(
-            <div>
-                <h1>Card.jsx</h1>
+            <div className="card">
+                <h2>{id}</h2>
             </div>
         )
     }

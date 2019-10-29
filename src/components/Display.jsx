@@ -1,18 +1,34 @@
 import React from 'react'
+import axios from 'axios'
 import Card from './Card'
 
 export default class Display extends React.Component {
     constructor() {
         super()
         this.state = {
-            cards: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+            cards: [],
             id: ''
         }
     }
+
+    getCard(){
+        // console.log(res.data)
+        axios
+        .get('/api/cards/')
+        .then(res =>
+            this.setState({
+                cards : res.data
+            }))
+    }
+
     render() {
         return (
             <section>
                 <h1>Display.jsx</h1>
+                
+                <button
+                onClick={()=>this.getCard()}
+                >GET CARD</button>
 
                 <div className='display'>
 
